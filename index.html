@@ -5,14 +5,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../Word-Guess-Game/asstes/css/reset.css">
-    <link rel="stylesheet" href="../Word-Guess-Game/asstes/css/style.css">
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Kalam:700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ultra&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700i&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>WORD-GUESS-GAME</title>
 </head>
 
 <body>
+    <!-- header -->
+    <header>
+        <h1>WORD-GUESS-GAME</h1>
+        <h2>GUESS THE PERSON</h2>
+
+    </header>
+    <!-- end of header -->
+
+    <!-- main container -->
+    <audio id="errorSound">
+			<source src="assets/sound/erro.mp3" type="audio/mpeg">
+			<source src="assets/sound/erro.ogg" type="audio/ogg" >
+		</audio>
+    <audio id="correctSound">
+			<source src="assets/sound/corre.mp3" type="audio/mpeg">
+			<source src="assets/sound/corre.ogg" type="audio/ogg">
+		</audio>
+    <audio id="applauseSound">
+			<source src="assets/sound/applause.mp3" type="audio/mpeg">
+			<source src="assets/sound/applause.ogg" type="audio/ogg">
+		</audio>
+    <audio id="loseSound">
+			<source src="assets/sound/nooo.mp3" type="audio/mpeg">
+			<source src="assets/sound/nooo.ogg" type="audio/ogg">
+		</audio>
+    <main>
+        <div class="container">
+            <div class="left">
+                <h3>HINT:</h3>
+                <div id="hint"></div>
+                <div id="person1"> <img src="assets/images/who.png" alt="GUESS WHO" id="pers"></div>
+            </div>
+            <div class="middle">
+                <h3 class="anykey">Press any letter to start the game</h3>
 
 
+                <p id="userChoice"></p>
+
+            </div>
+            <div class="right">
+                <div class="winner">
+                    <h3>Wins:</h3>
+                    <p id="wins"></p>
+                </div>
+                <div class="looser">
+                    <h3>Loses:</h3>
+                    <p id="lose"></p>
+                </div>
+                <div class="clear"></div>
+                <h3>Number of Guesses Remaining:</h3>
+                <p id="guesses"></p>
+                <h3>Letters Already Gessed:</h3>
+                <p id="alreadyGuessed"></p>
+
+
+            </div>
+
+        </div>
+
+
+
+    </main>
+    <!-- end of main container -->
+
+
+
+    <script src="assets/javascript/game.js"></script>
 </body>
 
 </html>

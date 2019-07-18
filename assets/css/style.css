@@ -1,0 +1,156 @@
+body {
+    background: url("../images/prism.png");
+    color: #fff;
+}
+
+header {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    font-size: 3em;
+    font-weight: 700;
+    font-style: italic;
+    color: rgb(195, 233, 26);
+    text-shadow: 0 0 3px #fff;
+}
+
+h2 {
+    text-align: center;
+    transform: rotate(-10deg);
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    font-family: 'Ultra', serif;
+    text-shadow: 0 0 6px rgb(233, 26, 112);
+    ;
+}
+
+h3 {
+    text-align: center;
+    font-size: 1.5em;
+    padding: 15px 0;
+}
+
+p {
+    text-align: center;
+    font-size: 1.5em;
+    padding: 5px 0;
+}
+
+.middle p {
+    font-size: 2em;
+    font-family: 'Kalam', cursive;
+    color: rgb(195, 233, 26);
+    padding: 50px 0;
+}
+
+main {
+    width: 80%;
+    height: auto;
+    /* border: 1px solid #fff; */
+    margin: 50px auto;
+}
+
+.left,
+.middle,
+.right {
+    height: 400px;
+    float: left;
+    margin: 10px;
+}
+
+.left,
+.right {
+    width: 28%;
+}
+
+.middle {
+    width: 38%;
+    border-left: 6px dotted #fff;
+    border-right: 6px dotted #fff;
+}
+
+img {
+    width: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+#hint {
+    text-align: center;
+    padding: 5px;
+    font-size: 1.3em;
+}
+
+.looser,
+.winner {
+    width: 50%;
+    float: left;
+    margin: 20px 0;
+}
+
+.clear {
+    clear: both;
+}
+
+@media screen and (max-width: 1250px) {
+    .middle {
+        width: 36%;
+    }
+    img {
+        width: 150px;
+    }
+}
+
+@media screen and (min-width: 767px) and (max-width: 980px) {
+    .left,
+    .right {
+        width: 25%;
+    }
+    img {
+        width: 130px;
+    }
+}
+
+@media screen and (min-width: 639px) and (max-width: 768px) {
+    .left,
+    .right,
+    .middle {
+        width: 100%;
+        height: auto;
+        margin: 10px 0;
+    }
+    img {
+        width: 100px;
+    }
+    .middle {
+        border-top: 4px dotted #fff;
+        border-bottom: 4px dotted #fff;
+        border-left: 0;
+        border-right: 0;
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width: 640px) {
+    .left,
+    .right,
+    .middle {
+        width: 100%;
+        height: auto;
+        margin: 10px 0;
+    }
+    .middle {
+        border-top: 2px dotted #fff;
+        border-bottom: 2px dotted #fff;
+        border-left: 0;
+        border-right: 0;
+    }
+}
