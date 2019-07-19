@@ -125,11 +125,32 @@ var person14 = {
     hint: ["American Gangster", "Out of Time", "No One In Safe", "Flight"]
 }
 
+var person15 = {
+    firstName: "Al",
+    lastName: "Pacino",
+    middleName: "James",
+    profession: "Actor",
+    images: "person15",
+    hint: ["Scarface", "Scent of a Woman", "Devil's Advocate", "Carlito's Way"]
+}
+
+var person16 = {
+    firstName: "Michelle",
+    lastName: "Pfeiffer",
+    middleName: "Marie",
+    profession: "Actress",
+    images: "person16",
+    hint: ["Scent of a Woman", "Malavita", "The Russia House", "What Lies Beneath"]
+}
+
+
+
 // end of persons list
 
 var array = [
-    person1, person2, person3, person4, person5, person6, person7,
-    person8, person9, person10, person11, person12, person13, person14
+    person1, person2, person3, person4, person5,
+    person6, person7, person8, person9, person10,
+    person11, person12, person13, person14, person15, person16
 ]; // array with persons
 
 var guessesLose = 0; // wrong letters count
@@ -207,11 +228,11 @@ function checkLetter() {
     }
 
     // hint for user
-    if (guessesLose > 5) {
+    if (guessesLose > 7) {
         document.getElementById("hint").innerText = "Profession is " + computerChoise.profession;
     }
 
-    if (guessesLose === 5) {
+    if (guessesLose === 7) {
         document.getElementById("hint1").innerText = "Middle Name is " + computerChoise.middleName;
     }
 
@@ -270,7 +291,15 @@ function checkLetter() {
                                                         if (computerChoise.images === "person13") {
                                                             document.getElementById("pers").src = "assets/images/person13.jpg";
                                                         } else {
-                                                            document.getElementById("pers").src = "assets/images/person14.jpg";
+                                                            if (computerChoise.images === "person14") {
+                                                                document.getElementById("pers").src = "assets/images/person14.jpg";
+                                                            } else {
+                                                                if (computerChoise.images === "person15") {
+                                                                    document.getElementById("pers").src = "assets/images/person15.jpg";
+                                                                } else {
+                                                                    document.getElementById("pers").src = "assets/images/person16.jpg";
+                                                                }
+                                                            }
                                                         }
                                                     }
                                                 }
@@ -285,6 +314,8 @@ function checkLetter() {
             }
         }
     }
+
+
 
     // if win
     if (!guessWord.includes("_")) {
