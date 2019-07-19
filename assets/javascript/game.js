@@ -180,7 +180,9 @@ function personChoice() {
     soundLose.currentTime = 0;
     document.getElementById("pers").src = "assets/images/who.png";
     document.getElementById("userChoice").innerHTML = guessWord.join(" ");
-    document.getElementById("hint").innerText = "";
+    document.getElementById("mainHint").innerText = "HINT:";
+    document.getElementById("guesses").innerText = guessesLose;
+
 
 }
 
@@ -210,18 +212,18 @@ function checkLetter() {
     }
 
     if (guessesLose === 5) {
-        document.getElementById("hint").innerText = "Middle Name is " + computerChoise.middleName;
+        document.getElementById("hint1").innerText = "Middle Name is " + computerChoise.middleName;
     }
 
     if (guessesLose < 5 && guessesLose >= 2) {
         if (computerChoise.profession === "Singer") {
-            document.getElementById("hint").innerText = "The song he/she sang: " + computerChoise.hint[Math.floor(Math.random() * computerChoise.hint.length)];
+            document.getElementById("hint2").innerText = "The song he/she sang: " + computerChoise.hint[Math.floor(Math.random() * computerChoise.hint.length)];
         } else {
-            document.getElementById("hint").innerText = "Movie he/she played: " + computerChoise.hint[Math.floor(Math.random() * computerChoise.hint.length)];
+            document.getElementById("hint2").innerText = "Movie he/she played: " + computerChoise.hint[Math.floor(Math.random() * computerChoise.hint.length)];
         }
     }
     if (guessesLose === 1) {
-        document.getElementById("hint").innerText = "First name is " + computerChoise.firstName;
+        document.getElementById("hint3").innerText = "First name is " + computerChoise.firstName;
     }
 
     //end of hint for user
@@ -231,49 +233,58 @@ function checkLetter() {
     function personImage() {
         if (computerChoise.images === "person1") {
             document.getElementById("pers").src = "assets/images/person1.jpg";
-        }
-        if (computerChoise.images === "person2") {
-            document.getElementById("pers").src = "assets/images/person2.jpg";
-        }
-        if (computerChoise.images === "person3") {
-            document.getElementById("pers").src = "assets/images/person3.jpeg";
-        }
-        if (computerChoise.images === "person4") {
-            document.getElementById("pers").src = "assets/images/person4.jpg";
-        }
-        if (computerChoise.images === "person5") {
-            document.getElementById("pers").src = "assets/images/person5.jpeg";
-        }
-        if (computerChoise.images === "person6") {
-            document.getElementById("pers").src = "assets/images/person6.jpg";
-        }
-        if (computerChoise.images === "person7") {
-            document.getElementById("pers").src = "assets/images/person7.jpg";
-        }
-        if (computerChoise.images === "person8") {
-            document.getElementById("pers").src = "assets/images/person8.jpg";
-        }
-        if (computerChoise.images === "person9") {
-            document.getElementById("pers").src = "assets/images/person9.jpg";
-        }
-        if (computerChoise.images === "person10") {
-            document.getElementById("pers").src = "assets/images/person10.jpg";
-        }
-        if (computerChoise.images === "person11") {
-            document.getElementById("pers").src = "assets/images/person11.jpeg";
-        }
-        if (computerChoise.images === "person12") {
-            document.getElementById("pers").src = "assets/images/person12.jpg";
-        }
-        if (computerChoise.images === "person13") {
-            document.getElementById("pers").src = "assets/images/person13.jpg";
-        }
-        if (computerChoise.images === "person14") {
-            document.getElementById("pers").src = "assets/images/person14.jpg";
+        } else {
+            if (computerChoise.images === "person2") {
+                document.getElementById("pers").src = "assets/images/person2.jpg";
+            } else {
+                if (computerChoise.images === "person3") {
+                    document.getElementById("pers").src = "assets/images/person3.jpeg";
+                } else {
+                    if (computerChoise.images === "person4") {
+                        document.getElementById("pers").src = "assets/images/person4.jpg";
+                    } else {
+                        if (computerChoise.images === "person5") {
+                            document.getElementById("pers").src = "assets/images/person5.jpeg";
+                        } else {
+                            if (computerChoise.images === "person6") {
+                                document.getElementById("pers").src = "assets/images/person6.jpg";
+                            } else {
+                                if (computerChoise.images === "person7") {
+                                    document.getElementById("pers").src = "assets/images/person7.jpg";
+                                } else {
+                                    if (computerChoise.images === "person8") {
+                                        document.getElementById("pers").src = "assets/images/person8.jpg";
+                                    } else {
+                                        if (computerChoise.images === "person9") {
+                                            document.getElementById("pers").src = "assets/images/person9.jpg";
+                                        } else {
+                                            if (computerChoise.images === "person10") {
+                                                document.getElementById("pers").src = "assets/images/person10.jpg";
+                                            } else {
+                                                if (computerChoise.images === "person11") {
+                                                    document.getElementById("pers").src = "assets/images/person11.jpeg";
+                                                } else {
+                                                    if (computerChoise.images === "person12") {
+                                                        document.getElementById("pers").src = "assets/images/person12.jpg";
+                                                    } else {
+                                                        if (computerChoise.images === "person13") {
+                                                            document.getElementById("pers").src = "assets/images/person13.jpg";
+                                                        } else {
+                                                            document.getElementById("pers").src = "assets/images/person14.jpg";
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
-
-
 
     // if win
     if (!guessWord.includes("_")) {
@@ -282,7 +293,7 @@ function checkLetter() {
         soundWin.play();
         soundWin.currentTime = 0;
         personImage();
-        document.getElementById("hint").innerText = "You Win";
+        document.getElementById("mainHint").innerText = "You Win";
         document.getElementById("userChoice").innerHTML = computerChoise.firstName + " " + computerChoise.lastName;
     } else {
         document.getElementById("userChoice").innerHTML = guessWord.join(" ");
@@ -295,7 +306,7 @@ function checkLetter() {
         countLose++;
         soundLose.play();
         soundLose.currentTime = 0;
-        document.getElementById("hint").innerText = "You Lose";
+        document.getElementById("mainHint").innerText = "You Lose";
         document.getElementById("pers").src = "assets/images/lose.gif";
     }
 
@@ -310,6 +321,10 @@ function reset() {
     guessWord = [];
     guessed = [];
     choisePerson = [];
+    document.getElementById("hint").innerText = "";
+    document.getElementById("hint1").innerText = "";
+    document.getElementById("hint2").innerText = "";
+    document.getElementById("hint3").innerText = "";
 }
 
 

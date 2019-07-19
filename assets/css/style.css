@@ -84,7 +84,10 @@ img {
     margin-top: 20px;
 }
 
-#hint {
+#hint,
+#hint1,
+#hint2,
+#hint3 {
     text-align: center;
     padding: 5px;
     font-size: 1.3em;
