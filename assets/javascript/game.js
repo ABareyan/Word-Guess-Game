@@ -282,55 +282,39 @@ function checkLetter() {
             document.getElementById("pers").src = "assets/images/person14.jpg";
         } else if (computerChoise.images === "person15") {
             document.getElementById("pers").src = "assets/images/person15.jpg";
-        } else {
-            document.getElementById("pers").src = "assets/images/person16.jpg";
-        }
+        } else document.getElementById("pers").src = "assets/images/person16.jpg";
     }
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
 
 
 
-// if win
-if (!guessWord.includes("_")) {
-    reset();
-    countWin++;
-    soundWin.play();
-    soundWin.currentTime = 0;
-    personImage();
-    document.getElementById("mainHint").innerText = "You Win";
-    document.getElementById("userChoice").innerHTML = computerChoise.firstName + " " + computerChoise.lastName;
-} else {
-    document.getElementById("userChoice").innerHTML = guessWord.join(" ");
-}
+    // if win
+    if (!guessWord.includes("_")) {
+        reset();
+        countWin++;
+        soundWin.play();
+        soundWin.currentTime = 0;
+        personImage();
+        document.getElementById("mainHint").innerText = "You Win";
+        document.getElementById("userChoice").innerHTML = computerChoise.firstName + " " + computerChoise.lastName;
+    } else {
+        document.getElementById("userChoice").innerHTML = guessWord.join(" ");
+    }
 
-// if lose
-if (guessesLose === 0) {
-    reset();
-    guessesLose = 10;
-    countLose++;
-    soundLose.play();
-    soundLose.currentTime = 0;
-    document.getElementById("mainHint").innerText = "You Lose";
-    document.getElementById("pers").src = "assets/images/lose.gif";
-}
+    // if lose
+    if (guessesLose === 0) {
+        reset();
+        guessesLose = 10;
+        countLose++;
+        soundLose.play();
+        soundLose.currentTime = 0;
+        document.getElementById("mainHint").innerText = "You Lose";
+        document.getElementById("pers").src = "assets/images/lose.gif";
+    }
 
-document.getElementById("alreadyGuessed").innerText = guessed;
-document.getElementById("guesses").innerText = guessesLose;
-document.getElementById("wins").innerText = countWin;
-document.getElementById("lose").innerText = countLose;
+    document.getElementById("alreadyGuessed").innerText = guessed;
+    document.getElementById("guesses").innerText = guessesLose;
+    document.getElementById("wins").innerText = countWin;
+    document.getElementById("lose").innerText = countLose;
 }
 
 // reset game
