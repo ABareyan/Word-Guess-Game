@@ -254,97 +254,83 @@ function checkLetter() {
     function personImage() {
         if (computerChoise.images === "person1") {
             document.getElementById("pers").src = "assets/images/person1.jpg";
+        } else if (computerChoise.images === "person2") {
+            document.getElementById("pers").src = "assets/images/person2.jpg";
+        } else if (computerChoise.images === "person3") {
+            document.getElementById("pers").src = "assets/images/person3.jpeg";
+        } else if (computerChoise.images === "person4") {
+            document.getElementById("pers").src = "assets/images/person4.jpg";
+        } else if (computerChoise.images === "person5") {
+            document.getElementById("pers").src = "assets/images/person5.jpeg";
+        } else if (computerChoise.images === "person6") {
+            document.getElementById("pers").src = "assets/images/person6.jpg";
+        } else if (computerChoise.images === "person7") {
+            document.getElementById("pers").src = "assets/images/person7.jpg";
+        } else if (computerChoise.images === "person8") {
+            document.getElementById("pers").src = "assets/images/person8.jpg";
+        } else if (computerChoise.images === "person9") {
+            document.getElementById("pers").src = "assets/images/person9.jpg";
+        } else if (computerChoise.images === "person10") {
+            document.getElementById("pers").src = "assets/images/person10.jpg";
+        } else if (computerChoise.images === "person11") {
+            document.getElementById("pers").src = "assets/images/person11.jpeg";
+        } else if (computerChoise.images === "person12") {
+            document.getElementById("pers").src = "assets/images/person12.jpg";
+        } else if (computerChoise.images === "person13") {
+            document.getElementById("pers").src = "assets/images/person13.jpg";
+        } else if (computerChoise.images === "person14") {
+            document.getElementById("pers").src = "assets/images/person14.jpg";
+        } else if (computerChoise.images === "person15") {
+            document.getElementById("pers").src = "assets/images/person15.jpg";
         } else {
-            if (computerChoise.images === "person2") {
-                document.getElementById("pers").src = "assets/images/person2.jpg";
-            } else {
-                if (computerChoise.images === "person3") {
-                    document.getElementById("pers").src = "assets/images/person3.jpeg";
-                } else {
-                    if (computerChoise.images === "person4") {
-                        document.getElementById("pers").src = "assets/images/person4.jpg";
-                    } else {
-                        if (computerChoise.images === "person5") {
-                            document.getElementById("pers").src = "assets/images/person5.jpeg";
-                        } else {
-                            if (computerChoise.images === "person6") {
-                                document.getElementById("pers").src = "assets/images/person6.jpg";
-                            } else {
-                                if (computerChoise.images === "person7") {
-                                    document.getElementById("pers").src = "assets/images/person7.jpg";
-                                } else {
-                                    if (computerChoise.images === "person8") {
-                                        document.getElementById("pers").src = "assets/images/person8.jpg";
-                                    } else {
-                                        if (computerChoise.images === "person9") {
-                                            document.getElementById("pers").src = "assets/images/person9.jpg";
-                                        } else {
-                                            if (computerChoise.images === "person10") {
-                                                document.getElementById("pers").src = "assets/images/person10.jpg";
-                                            } else {
-                                                if (computerChoise.images === "person11") {
-                                                    document.getElementById("pers").src = "assets/images/person11.jpeg";
-                                                } else {
-                                                    if (computerChoise.images === "person12") {
-                                                        document.getElementById("pers").src = "assets/images/person12.jpg";
-                                                    } else {
-                                                        if (computerChoise.images === "person13") {
-                                                            document.getElementById("pers").src = "assets/images/person13.jpg";
-                                                        } else {
-                                                            if (computerChoise.images === "person14") {
-                                                                document.getElementById("pers").src = "assets/images/person14.jpg";
-                                                            } else {
-                                                                if (computerChoise.images === "person15") {
-                                                                    document.getElementById("pers").src = "assets/images/person15.jpg";
-                                                                } else {
-                                                                    document.getElementById("pers").src = "assets/images/person16.jpg";
-                                                                }
-                                                            }
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
+            document.getElementById("pers").src = "assets/images/person16.jpg";
         }
     }
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
 
 
 
-    // if win
-    if (!guessWord.includes("_")) {
-        reset();
-        countWin++;
-        soundWin.play();
-        soundWin.currentTime = 0;
-        personImage();
-        document.getElementById("mainHint").innerText = "You Win";
-        document.getElementById("userChoice").innerHTML = computerChoise.firstName + " " + computerChoise.lastName;
-    } else {
-        document.getElementById("userChoice").innerHTML = guessWord.join(" ");
-    }
+// if win
+if (!guessWord.includes("_")) {
+    reset();
+    countWin++;
+    soundWin.play();
+    soundWin.currentTime = 0;
+    personImage();
+    document.getElementById("mainHint").innerText = "You Win";
+    document.getElementById("userChoice").innerHTML = computerChoise.firstName + " " + computerChoise.lastName;
+} else {
+    document.getElementById("userChoice").innerHTML = guessWord.join(" ");
+}
 
-    // if lose
-    if (guessesLose === 0) {
-        reset();
-        guessesLose = 10;
-        countLose++;
-        soundLose.play();
-        soundLose.currentTime = 0;
-        document.getElementById("mainHint").innerText = "You Lose";
-        document.getElementById("pers").src = "assets/images/lose.gif";
-    }
+// if lose
+if (guessesLose === 0) {
+    reset();
+    guessesLose = 10;
+    countLose++;
+    soundLose.play();
+    soundLose.currentTime = 0;
+    document.getElementById("mainHint").innerText = "You Lose";
+    document.getElementById("pers").src = "assets/images/lose.gif";
+}
 
-    document.getElementById("alreadyGuessed").innerText = guessed;
-    document.getElementById("guesses").innerText = guessesLose;
-    document.getElementById("wins").innerText = countWin;
-    document.getElementById("lose").innerText = countLose;
+document.getElementById("alreadyGuessed").innerText = guessed;
+document.getElementById("guesses").innerText = guessesLose;
+document.getElementById("wins").innerText = countWin;
+document.getElementById("lose").innerText = countLose;
 }
 
 // reset game
