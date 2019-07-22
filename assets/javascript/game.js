@@ -144,13 +144,12 @@ var person16 = {
 }
 
 
-
 // end of persons list
 
 var array = [
-    person1, person2, person3, person4, person5,
-    person6, person7, person8, person9, person10,
-    person11, person12, person13, person14, person15, person16
+    person1, person2, person3, person4, person5, person6,
+    person7, person8, person9, person10, person11, person12,
+    person13, person14, person15, person16
 ]; // array with persons
 
 var guessesLose = 0; // wrong letters count
@@ -171,6 +170,8 @@ var computerChoise; // random person choice
 
 var nameLow; // lower case of random person choice 
 
+var userHint; // hint for user
+
 var soundError = document.getElementById("errorSound"); // Sound of incorrect choice
 
 var soundCorrect = document.getElementById("correctSound"); // Sound of correct choice
@@ -187,7 +188,13 @@ document.getElementById("lose").innerText = countLose;
 
 function personChoice() {
     computerChoise = array[Math.floor(Math.random() * array.length)];
-    computerChoiseImage = computerChoise.images;
+
+    // if user guessed all persons, game start again
+    if (array.length === 0) {
+        alert("You are an absolute winner!")
+        window.location = "index.html";
+    }
+
     nameLow = computerChoise.lastName.toLowerCase();
     nameUpper = computerChoise.lastName.toUpperCase();
     for (var i = 0; i < nameLow.length; i++) {
@@ -203,8 +210,6 @@ function personChoice() {
     document.getElementById("userChoice").innerHTML = guessWord.join(" ");
     document.getElementById("mainHint").innerText = "HINT:";
     document.getElementById("guesses").innerText = guessesLose;
-
-
 }
 
 
@@ -238,9 +243,11 @@ function checkLetter() {
 
     if (guessesLose < 5 && guessesLose >= 2) {
         if (computerChoise.profession === "Singer") {
-            document.getElementById("hint2").innerText = "The song he/she sang: " + computerChoise.hint[Math.floor(Math.random() * computerChoise.hint.length)];
+            userHint = computerChoise.hint[Math.floor(Math.random() * computerChoise.hint.length)];
+            document.getElementById("hint2").innerText = "The song he/she sang: " + userHint;
         } else {
-            document.getElementById("hint2").innerText = "Movie he/she played: " + computerChoise.hint[Math.floor(Math.random() * computerChoise.hint.length)];
+            userHint = computerChoise.hint[Math.floor(Math.random() * computerChoise.hint.length)];
+            document.getElementById("hint2").innerText = "Movie he/she played: " + userHint;
         }
     }
     if (guessesLose === 1) {
@@ -294,6 +301,11 @@ function checkLetter() {
         soundWin.play();
         soundWin.currentTime = 0;
         personImage();
+        array = array.filter(function(item) { // no-repeat person choice, if user win
+            return item !== computerChoise;
+        });
+
+
         document.getElementById("mainHint").innerText = "You Win";
         document.getElementById("userChoice").innerHTML = computerChoise.firstName + " " + computerChoise.lastName;
     } else {
@@ -309,6 +321,8 @@ function checkLetter() {
         soundLose.currentTime = 0;
         document.getElementById("mainHint").innerText = "You Lose";
         document.getElementById("pers").src = "assets/images/lose.gif";
+
+
     }
 
     document.getElementById("alreadyGuessed").innerText = guessed;
