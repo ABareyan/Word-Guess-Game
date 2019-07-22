@@ -140,7 +140,7 @@ var person16 = {
     middleName: "Marie",
     profession: "Actress",
     images: "person16",
-    hint: ["Scent of a Woman", "Malavita", "The Russia House", "What Lies Beneath"]
+    hint: ["Scarface", "Malavita", "The Russia House", "What Lies Beneath"]
 }
 
 
