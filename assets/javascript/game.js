@@ -143,13 +143,21 @@ var person16 = {
     hint: ["Scarface", "Malavita", "The Russia House", "What Lies Beneath"]
 }
 
+var person17 = {
+    firstName: "Kurt",
+    lastName: "Cobain",
+    middleName: "Donald",
+    profession: "Singer",
+    images: "person17",
+    hint: ["Come As You Are", "Bloom", "Lithium", "Polly"]
+}
 
 // end of persons list
 
 var array = [
     person1, person2, person3, person4, person5, person6,
     person7, person8, person9, person10, person11, person12,
-    person13, person14, person15, person16
+    person13, person14, person15, person16, person17
 ]; // array with persons
 
 var guessesLose = 0; // wrong letters count
@@ -289,7 +297,9 @@ function checkLetter() {
             document.getElementById("pers").src = "assets/images/person14.jpg";
         } else if (computerChoise.images === "person15") {
             document.getElementById("pers").src = "assets/images/person15.jpg";
-        } else document.getElementById("pers").src = "assets/images/person16.jpg";
+        } else if (computerChoise.images === "person16") {
+            document.getElementById("pers").src = "assets/images/person16.jpg";
+        } else document.getElementById("pers").src = "assets/images/person17.jpg";
     }
 
 
