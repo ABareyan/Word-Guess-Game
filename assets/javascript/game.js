@@ -152,12 +152,33 @@ var person17 = {
     hint: ["Come As You Are", "Bloom", "Lithium", "Polly"]
 }
 
+var person18 = {
+    firstName: "Jennifer",
+    lastName: "Lopez",
+    middleName: "Lynn",
+    profession: "Singer",
+    images: "person18",
+    hint: ["On The Floor", "Amor, Amor, Amor", "Dance Again", "Papi"]
+}
+
+var person19 = {
+    firstName: "Jason",
+    lastName: "Statham",
+    middleName: "Unknown",
+    profession: "Actor",
+    images: "person19",
+    hint: ["The Bank Job", "Lock, Stock and Two Smoking Barrels", "Snatch", "Parker"]
+}
+
+
+
+
 // end of persons list
 
 var array = [
     person1, person2, person3, person4, person5, person6,
     person7, person8, person9, person10, person11, person12,
-    person13, person14, person15, person16, person17
+    person13, person14, person15, person16, person17, person18, person19
 ]; // array with persons
 
 var guessesLose = 0; // wrong letters count
@@ -299,7 +320,11 @@ function checkLetter() {
             document.getElementById("pers").src = "assets/images/person15.jpg";
         } else if (computerChoise.images === "person16") {
             document.getElementById("pers").src = "assets/images/person16.jpg";
-        } else document.getElementById("pers").src = "assets/images/person17.jpg";
+        } else if (computerChoise.images === "person17") {
+            document.getElementById("pers").src = "assets/images/person17.jpg";
+        } else if (computerChoise.images === "person18") {
+            document.getElementById("pers").src = "assets/images/person18.jpg";
+        } else document.getElementById("pers").src = "assets/images/person19.jpg";
     }
 
 
@@ -314,7 +339,6 @@ function checkLetter() {
         array = array.filter(function(item) { // no-repeat person choice, if user win
             return item !== computerChoise;
         });
-
 
         document.getElementById("mainHint").innerText = "You Win";
         document.getElementById("userChoice").innerHTML = computerChoise.firstName + " " + computerChoise.lastName;
