@@ -4,7 +4,7 @@ var person1 = {
     lastName: "Wahlberg",
     middleName: "Robert Michael",
     profession: "Actor",
-    images: "person1",
+    images: "assets/images/person1.jpg",
     hint: ["Wonderland", "Shooter", "Mile 22", "The Departed"]
 }
 
@@ -13,7 +13,7 @@ var person2 = {
     lastName: "Smith",
     middleName: "Carrol",
     profession: "Actor",
-    images: "person2",
+    images: "assets/images/person2.jpg",
     hint: ["Focus", "Aladdin", "Seven Pounds", "The Pursuit of Happynes"]
 }
 
@@ -22,7 +22,7 @@ var person3 = {
     lastName: "Nicholson",
     middleName: "Joseph",
     profession: "Actor",
-    images: "person3",
+    images: "assets/images/person3.jpeg",
     hint: ["One Flew Over the Cuckoo's Nest", "As Good as It Gets", "The Departed", "The Bucket List"]
 }
 
@@ -31,7 +31,7 @@ var person4 = {
     lastName: "Freeman",
     middleName: "Porterfield",
     profession: "Actor",
-    images: "person4",
+    images: "assets/images/person4.jpg",
     hint: ["The Shawshank Redemption", "Seven", "The Bucket List", "Million Dollar Baby"]
 }
 
@@ -40,7 +40,7 @@ var person5 = {
     lastName: "Hanks",
     middleName: "Jeffrey",
     profession: "Actor",
-    images: "person5",
+    images: "assets/images/person5.jpeg",
     hint: ["Forrest Gump", "The Green Mile", "Saving Private Ryan", "Bridge of Spies"]
 }
 
@@ -49,7 +49,7 @@ var person6 = {
     lastName: "Thurman",
     middleName: "Karuna",
     profession: "Actress",
-    images: "person6",
+    images: "assets/images/person6.jpg",
     hint: ["Pulp Fiction", "Prime", "Be Cool", "Dark Hall"]
 }
 
@@ -58,7 +58,7 @@ var person7 = {
     lastName: "Rodriguez",
     middleName: "Mayte",
     profession: "Actress",
-    images: "person7",
+    images: "assets/images/person7.jpg",
     hint: ["Lost", "Fast & Furious", "Tombo", "Girlfight"]
 }
 
@@ -67,7 +67,7 @@ var person8 = {
     lastName: "Mercury",
     middleName: "Farrokh Bulsara",
     profession: "Singer",
-    images: "person8",
+    images: "assets/images/person8.jpg",
     hint: ["We Will Rock You", "The Show Must Go On", "Barcelona", "How can I go on"]
 }
 
@@ -76,7 +76,7 @@ var person9 = {
     lastName: "Fabian",
     middleName: "Sophie Katy",
     profession: "Singer",
-    images: "person9",
+    images: "assets/images/person9.jpg",
     hint: ["Je t'aime", "Immortelle", "Adagio", "Ave Maria"]
 }
 
@@ -85,7 +85,7 @@ var person10 = {
     lastName: "Presley",
     middleName: "Aron",
     profession: "Singer",
-    images: "person10",
+    images: "assets/images/person10.jpg",
     hint: ["Can't Help Falling In Love", "Jailhouse Rock", "If I Can Dream", "Love Me Tender"]
 }
 
@@ -94,7 +94,7 @@ var person11 = {
     lastName: "Charles",
     middleName: "Robinson",
     profession: "Singer",
-    images: "person11",
+    images: "assets/images/person11.jpeg",
     hint: ["Hit The Road, Jack", "Say No More", "Georgia On My Mind", "I Got a Woman"]
 }
 
@@ -103,7 +103,7 @@ var person12 = {
     lastName: "Reno",
     middleName: "Moreno y Herrera",
     profession: "Actor",
-    images: "person12",
+    images: "assets/images/person12.jpg",
     hint: ["Leon", "Wasabi", "22 Bullets", "Ronin"]
 }
 
@@ -112,7 +112,7 @@ var person13 = {
     lastName: "Mendes",
     middleName: "De la Caridad",
     profession: "Actress",
-    images: "person13",
+    images: "assets/images/person13.jpg",
     hint: ["Fast & Furious", "Out of Time", "Hitch", "Cleaner"]
 }
 
@@ -121,7 +121,7 @@ var person14 = {
     lastName: "Washington",
     middleName: "Hayes",
     profession: "Actor",
-    images: "person14",
+    images: "assets/images/person14.jpg",
     hint: ["American Gangster", "Out of Time", "No One In Safe", "Flight"]
 }
 
@@ -130,7 +130,7 @@ var person15 = {
     lastName: "Pacino",
     middleName: "James",
     profession: "Actor",
-    images: "person15",
+    images: "assets/images/person15.jpg",
     hint: ["Scarface", "Scent of a Woman", "Devil's Advocate", "Carlito's Way"]
 }
 
@@ -139,7 +139,7 @@ var person16 = {
     lastName: "Pfeiffer",
     middleName: "Marie",
     profession: "Actress",
-    images: "person16",
+    images: "assets/images/person16.jpg",
     hint: ["Scarface", "Malavita", "The Russia House", "What Lies Beneath"]
 }
 
@@ -148,7 +148,7 @@ var person17 = {
     lastName: "Cobain",
     middleName: "Donald",
     profession: "Singer",
-    images: "person17",
+    images: "assets/images/person17.jpg",
     hint: ["Come As You Are", "Bloom", "Lithium", "Polly"]
 }
 
@@ -157,7 +157,7 @@ var person18 = {
     lastName: "Lopez",
     middleName: "Lynn",
     profession: "Singer",
-    images: "person18",
+    images: "assets/images/person18.jpg",
     hint: ["On The Floor", "Amor, Amor, Amor", "Dance Again", "Papi"]
 }
 
@@ -166,7 +166,7 @@ var person19 = {
     lastName: "Statham",
     middleName: "Unknown",
     profession: "Actor",
-    images: "person19",
+    images: "assets/images/person19.jpg",
     hint: ["The Bank Job", "Lock, Stock and Two Smoking Barrels", "Snatch", "Parker"]
 }
 
@@ -285,57 +285,13 @@ function checkLetter() {
 
     //end of hint for user
 
-
-    // person image if win
-    function personImage() {
-        if (computerChoise.images === "person1") {
-            document.getElementById("pers").src = "assets/images/person1.jpg";
-        } else if (computerChoise.images === "person2") {
-            document.getElementById("pers").src = "assets/images/person2.jpg";
-        } else if (computerChoise.images === "person3") {
-            document.getElementById("pers").src = "assets/images/person3.jpeg";
-        } else if (computerChoise.images === "person4") {
-            document.getElementById("pers").src = "assets/images/person4.jpg";
-        } else if (computerChoise.images === "person5") {
-            document.getElementById("pers").src = "assets/images/person5.jpeg";
-        } else if (computerChoise.images === "person6") {
-            document.getElementById("pers").src = "assets/images/person6.jpg";
-        } else if (computerChoise.images === "person7") {
-            document.getElementById("pers").src = "assets/images/person7.jpg";
-        } else if (computerChoise.images === "person8") {
-            document.getElementById("pers").src = "assets/images/person8.jpg";
-        } else if (computerChoise.images === "person9") {
-            document.getElementById("pers").src = "assets/images/person9.jpg";
-        } else if (computerChoise.images === "person10") {
-            document.getElementById("pers").src = "assets/images/person10.jpg";
-        } else if (computerChoise.images === "person11") {
-            document.getElementById("pers").src = "assets/images/person11.jpeg";
-        } else if (computerChoise.images === "person12") {
-            document.getElementById("pers").src = "assets/images/person12.jpg";
-        } else if (computerChoise.images === "person13") {
-            document.getElementById("pers").src = "assets/images/person13.jpg";
-        } else if (computerChoise.images === "person14") {
-            document.getElementById("pers").src = "assets/images/person14.jpg";
-        } else if (computerChoise.images === "person15") {
-            document.getElementById("pers").src = "assets/images/person15.jpg";
-        } else if (computerChoise.images === "person16") {
-            document.getElementById("pers").src = "assets/images/person16.jpg";
-        } else if (computerChoise.images === "person17") {
-            document.getElementById("pers").src = "assets/images/person17.jpg";
-        } else if (computerChoise.images === "person18") {
-            document.getElementById("pers").src = "assets/images/person18.jpg";
-        } else document.getElementById("pers").src = "assets/images/person19.jpg";
-    }
-
-
-
     // if win
     if (!guessWord.includes("_")) {
         reset();
         countWin++;
         soundWin.play();
         soundWin.currentTime = 0;
-        personImage();
+        document.getElementById("pers").src = computerChoise.images; // person image
         array = array.filter(function(item) { // no-repeat person choice, if user win
             return item !== computerChoise;
         });
