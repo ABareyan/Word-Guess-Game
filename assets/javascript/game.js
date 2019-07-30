@@ -189,6 +189,8 @@ var countLose = 0; // count of lose
 
 var userGuess; // user guess letter
 
+var userGuessLow; // for change user guessed to lowercase
+
 var guessWord = []; // user guess letter
 
 var choisePerson = []; // computer person
@@ -201,13 +203,13 @@ var nameLow; // lower case of random person choice
 
 var userHint; // hint for user
 
-var soundError = document.getElementById("errorSound"); // Sound of incorrect choice
+var soundError = new Audio('assets/sound/erro.mp3'); // Sound of incorrect choice
 
-var soundCorrect = document.getElementById("correctSound"); // Sound of correct choice
+var soundCorrect = new Audio('assets/sound/corre.mp3'); // Sound of correct choice
 
-var soundWin = document.getElementById("applauseSound"); // Win sound
+var soundWin = new Audio('assets/sound/applause.mp3'); // Win sound
 
-var soundLose = document.getElementById("loseSound"); // Lose sound
+var soundLose = new Audio('assets/sound/lose.mp3"'); // Lose sound
 
 
 document.getElementById("userChoice").innerHTML = guessWord.join(" ");
@@ -225,7 +227,6 @@ function personChoice() {
     }
 
     nameLow = computerChoise.lastName.toLowerCase();
-    nameUpper = computerChoise.lastName.toUpperCase();
     for (var i = 0; i < nameLow.length; i++) {
         guessWord[i] = "_";
         choisePerson.push(nameLow[i]);
@@ -334,7 +335,8 @@ function reset() {
 
 
 document.onkeyup = function(even) {
-    userGuess = even.key;
+    userGuessLow = even.key;
+    userGuess = userGuessLow.toLowerCase();
     if (!guessWord.includes("_")) {
         personChoice();
     } else {
