@@ -6,9 +6,9 @@ https://abareyan.github.io/Word-Guess-Game/
 
 ## Screen Shots
 
-![Screen1](assest/images/Screen2.png)
-![Screen2](assest/images/Screen1.png)
-![Screen3](assest/images/Screen3.png)
+![Screen1](assets/images/Screen2.png)
+![Screen2](assets/images/Screen1.png)
+![Screen3](assets/images/Screen3.png)
 
 ## Rules of this game.
 
